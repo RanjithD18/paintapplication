@@ -5,47 +5,63 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Paint Application</title>
-    <style>
-      * {
-        box-sizing: border-box;
-        font-family: Arial, Helvetica, sans-serif;
-      }
-      body {
-        background-color: rgb(240, 181, 142);
-        color: #17421d;
-      }
-      .container {
-        width: 1080px;
-        margin-left: auto;
-        margin-right: auto;
-      }
-      .content {
-        display: block;
-        width: 100%;
-        background-color: #d4cfff;
-        min-height: 800px;
-        margin: 100px 50px 0px 0px;
-        padding-top: 20px;
-      }
-      h1 {
-        text-align: center;
-      }
-      canvas {
-        margin-left: 40px;
-        margin-right: 40px;
-      }
-      .toolbar {
-        text-align: center;
-      }
-    </style>
-    <script type="text/javascript"></script>
+    <link rel="stylesheet" href="./css/style.css" />
+    <script type="text/javascript" src="./js/script.js"></script>
   </head>
   <body>
     <div class="container">
       <div class="content">
         <h1>Drawing Application</h1>
+        <canvas id="myCanvas" width="400" height="400" style="border: 1px solid #000000">
+        </canvas>
+        <div class="toolbar">
+          <input type="button" id="red" value="Red">
+          <input type="button" id="blue" value="Blue">
+          <input type="button" id="yellow" value="Yellow">
+        </div>
+        <div class="toolbar">
+
+          <input type="button" id="circle" value="Circle" /> 
+          <input type="button" id="square" value="Square" />
+          <input type="button" id="rectangle" value="Rectangle" />
+          <input type="button" id="triangle" value="Triangle" />
+          
+        </div>
+        
       </div>
     </div>
-    <script></script>
+    <script>
+
+      var c= document.getElementById("myCanvas");
+      
+      var ctx= c.getContext("2d");
+      
+      shape = 0;
+      
+    
+      
+      c.addEventListener("click", myClickEvent); 
+      document
+        .getElementById("circle") 
+        .addEventListener("click", circleclicked);
+      
+      document 
+        .getElementById("square")
+        .addEventListener("click", squareclicked); 
+      document 
+        .getElementById("rectangle")
+        .addEventListener("click", rectangleclicked);
+      document 
+        .getElementById("triangle")
+        .addEventListener("click", triangleclicked);
+      
+      
+      document.getElementById("red").addEventListener("click", redClicked);
+      
+      document.getElementById("blue").addEventListener("click", blueClicked);
+      
+      document.getElementById("yellow").addEventListener("click", yellowClicked);
+      
+    </script>
   </body>
 </html>
