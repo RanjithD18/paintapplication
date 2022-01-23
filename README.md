@@ -247,7 +247,7 @@ function yellowClicked() {
 ~~~
 
 ## OUTPUT:
-![output]()
+![output](https://github.com/RanjithD18/paintapplication/blob/main/Screenshot%20(73).png)
 
 
 ## Result:
