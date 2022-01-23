@@ -29,3 +29,13 @@
   .toolbar {
     text-align: center;
   }
+  .footer {
+    display: block;
+    width: 100%;
+    height: 40px;
+    background-color: #084475;
+    text-align: center;
+    padding-top: 10px;
+    margin: 0px 0px 0px 0px;
+    color: whitesmoke;
+  }
